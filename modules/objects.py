@@ -11,7 +11,7 @@ def objects():
     # default is for Area 1
 
     area_array = [1, 5, 9, 10]
-    area_array = [5]
+    #area_array = [5]
     area = area_array[randint(0, len(area_array)-1)]
 
     if area == 5:
