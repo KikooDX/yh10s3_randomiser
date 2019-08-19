@@ -121,3 +121,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Generated files
+generated_level.yh10s3
+seed.txt
+test

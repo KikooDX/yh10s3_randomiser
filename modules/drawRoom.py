@@ -6,8 +6,8 @@ def drawRoom(level, start_x, start_y, room, current_id, room_type, objet_dict, a
         banned_objects += "~"
     for y in range(start_y, start_y + 112, 16):
         for x in range(start_x, start_x + 112, 16):
-            objet = room[i]
             for j in range(2):
+                objet = room[i]
                 offset_x = 0
                 offset_y = 0
                 draw = True
