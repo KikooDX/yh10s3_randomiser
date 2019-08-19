@@ -10,8 +10,8 @@ def objects():
     level_infos = [54, "", 1, 0, 0] # music, title, BG, motion sensor, darkness
     # default is for Area 1
 
-    area_array = [1, 5, 9, 10]
-    #area_array = [5]
+    area_array = [1, 5, 9, 10, 12]
+    #area_array = [12]
     area = area_array[randint(0, len(area_array)-1)]
 
     if area == 5:
@@ -22,6 +22,10 @@ def objects():
         level_infos = [63, "", 14, 0, 0]
         objet_dict.update({"<" : ("97", 0, 0), # set red conveyors
                            ">" : ("98", 0, 0)})
+    elif area == 12:
+        level_infos = [65, "", 16, 0, 0]
+        objet_dict.update({"<t" : ("100", 0, 0),
+                           ">t" : ("100", 0, 0)}) # glue on conveyors
 
     levelinfo = "\n[levelinfo]\n"
     for i, info in enumerate(level_infos):
