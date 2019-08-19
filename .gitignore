@@ -126,3 +126,5 @@ dmypy.json
 generated_level.yh10s3
 seed.txt
 test
+generated_level.yh10s3
+*.yh10s3

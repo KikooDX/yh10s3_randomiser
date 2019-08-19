@@ -13,6 +13,7 @@ def main(file_name="generated_level.yh10s3"):
     print("Generation end")
 
     object_dict, levelinfo, area = objects()
+    print("Area {}".format(area))
 
     x = 144
     y = 32
@@ -37,7 +38,7 @@ def main(file_name="generated_level.yh10s3"):
         level, current_id = drawRoom(level, x, y, r_tmp, current_id, room_type, object_dict, area)
 
     level += levelinfo
-    print("Saving level...")
+    print("Saving level...\n")
     with open(file_name, "w") as file:
         file.write(level)
 
