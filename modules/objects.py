@@ -1,4 +1,4 @@
-from random import randint
+from random import choice
 
 def objects():
     objet_dict = {"#" : ("75", 0, 0), #block
@@ -11,8 +11,8 @@ def objects():
     # default is for Area 1
 
     area_array = [1, 5, 9, 10, 12, 15]
-    #area_array = [12]
-    area = area_array[randint(0, len(area_array)-1)]
+    area = choice(area_array)
+    #area = 12
 
     if area == 5:
         level_infos = [58, "", 6, 0, 0]
