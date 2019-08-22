@@ -10,12 +10,18 @@ def objects():
     level_infos = [54, "", 1, 0, 0] # music, title, BG, motion sensor, darkness
     # default is for Area 1
 
-    area_array = [1, 5, 9, 10, 12, 15]
+    area_array = [1, 5, 8, 9, 10, 12, 15]
     area = choice(area_array)
     #area = 12
 
     if area == 5:
         level_infos = [58, "", 6, 0, 0]
+    elif area == 8:
+        level_infos = [61, "", 13, 0, 0]
+        objet_dict.update({"#" : ("92", 0, 0), # replaces blocks and conveyors by invisible blocks
+                           "<" : ("92", 0, 0),
+                           ">" : ("92", 0, 0),
+                           "v" : ("93", 0, 0),}) # spikes are invisible
     elif area == 9:
         level_infos = [62, "", 11, 1, 0] # laser
     elif area == 10:
