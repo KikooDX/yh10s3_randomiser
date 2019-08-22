@@ -7,12 +7,16 @@ from modules.drawRoom import *
 from modules.objects import *
 
 def main(file_name="generated_level.yh10s3"):
+    area_array = [1, 5, 8, 9, 10, 12, 15]
+    area = choice(area_array)
+    #area = 12
+    
     r_tl, r_tr, r_dl, r_dr = loadRooms()
     print("Generation start")
-    level, current_id = createFrame()
+    level, current_id = createFrame(area)
     print("Generation end")
 
-    object_dict, levelinfo, area = objects()
+    object_dict, levelinfo = objects(area)
     print("Area {}".format(area))
 
     x = 144

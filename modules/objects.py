@@ -1,6 +1,6 @@
 from random import choice
 
-def objects():
+def objects(area):
     objet_dict = {"#" : ("75", 0, 0), #block
                   "v" : ("78", 0, 0), #spike
                   "<" : ("79", 0, 0), #left conveyor
@@ -9,10 +9,6 @@ def objects():
 
     level_infos = [54, "", 1, 0, 0] # music, title, BG, motion sensor, darkness
     # default is for Area 1
-
-    area_array = [1, 5, 8, 9, 10, 12, 15]
-    area = choice(area_array)
-    #area = 12
 
     if area == 5:
         level_infos = [58, "", 6, 0, 0]
@@ -39,4 +35,4 @@ def objects():
     for i, info in enumerate(level_infos):
         levelinfo += "{}={}\n".format(i+1, info)
 
-    return objet_dict, levelinfo, area
+    return objet_dict, levelinfo

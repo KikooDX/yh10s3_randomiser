@@ -1,6 +1,10 @@
-def createFrame():
+def createFrame(area):
     here_id = 0
     lvl = "[save]\n"
+    if area == 8:
+        filler = "92"
+    else:
+        filler = "75"
     
     for h in range(2):
         if h == 0:
@@ -12,7 +16,7 @@ def createFrame():
             for j in range(3):
                 lvl += "{}{}=".format(here_id, j)
                 if j == 0:
-                    lvl += "75"
+                    lvl += filler
                 elif j == 1:
                     lvl += str(x)
                 elif j == 2:
@@ -30,7 +34,7 @@ def createFrame():
             for j in range(3):
                 lvl += "{}{}=".format(here_id, j)
                 if j == 0:
-                    lvl += "75"
+                    lvl += filler
                 elif j == 1:
                     lvl += str(x)
                 elif j == 2:
